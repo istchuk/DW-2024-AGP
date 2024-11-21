@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans";
+}
+
+.container{
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titulo {
+    padding-bottom: 50px;
+    font-size: 60px;
+}
+
+.tasks{
+    padding: 30px;
+}
+
+ul {
+    padding: 10px;
+}
+
+.tasks li{
+    min-height: 55px;
+    width: 600px;
+    border: 1px solid black;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    text-indent: 5px;
+}
+
+.gerar{
+    height: 55px;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.create{
+    width: 535px;
+    height: 55px;
+    border-radius: 4px;
+    font-size: 27px;
+    text-indent: 7px;
+}
+
+.add{
+    width: 55px;
+    border-radius: 4px;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(80, 79, 79);
+}
+
+li {
+    list-style-type: none;
+}
+
+progress {
+    height: 45px;
+    width: 600px;
+    background-color: green;
+}
