@@ -26,6 +26,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 90px;
 }
 
 .titulo {
@@ -80,13 +81,8 @@ ul {
 li {
     list-style-type: none;
     display: flex;
-    align-items: end;
-    justify-content: flex-end;
 }
 
-li:first-child{
-    margin-right: auto;
-}
 
 progress {
     height: 45px;
@@ -106,7 +102,7 @@ input.dark{
     color: var(--dark-text-color);
 }
 
-li.dark{
+li{
     background-color: rgb(65, 24, 116);
     color: var(--dark-title);
 }
