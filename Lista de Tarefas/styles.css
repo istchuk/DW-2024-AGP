@@ -6,12 +6,16 @@
 }
 
 :root {
-    --text-color: purple;
-    --light-color: white;
     --dark-color: rgb(36, 9, 69);
     --dark-input: rgb(46, 15, 85);
     --dark-text-color: rgb(130, 109, 151);
     --dark-title: white;
+
+    --light-title: rgb(114, 18, 155);
+    --light-input: rgb(220, 188, 234);
+    --light-text-color: rgb(28, 3, 52);
+    --light-li: rgb(220, 188, 234);
+    
 }
 
 
@@ -75,6 +79,13 @@ ul {
 
 li {
     list-style-type: none;
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+}
+
+li:first-child{
+    margin-right: auto;
 }
 
 progress {
@@ -110,7 +121,7 @@ button.dark{
     border: none;
 }
 
-button:hover{
+button.dark:hover{
     background-image: linear-gradient(rgb(99, 63, 142), rgb(46, 15, 85));
     color: white;
     border: none;
@@ -121,33 +132,34 @@ button:hover{
 /* Light Theme */
 
 body.light{
-    background-color: var(--dark-color);
-    color: var(--text-color);
+    background-color: var(--dark-title);
 }
 
 input.light{
-    background-color: var(--dark-input);
-    border: 1px solid var(--dark-input);
-    color: var(--dark-text-color);
+    background-color: var(--light-input);
+    border: 1px solid var(--light-title);
+    color: var(--light-title);
 }
 
 li.light{
-    background-color: rgb(65, 24, 116);
-    color: var(--dark-title);
+    background-color: var(--light-li);
+    color: var(--light-title);
+    border: 1px solid var(--light-title);
+
 }
 
 h1.light{
-    color: var(--dark-title);
+    color: var(--light-title);
 }
 
 button.light{
-    background-image: linear-gradient(rgb(46, 15, 85), rgb(99, 63, 142));
-    color: var(--dark-input);
-    border: none;
+    background-image: linear-gradient(var(--light-title), var(--light-li));
+    color: var(--light-input);
+    border: 1px, solid, var(--light-title);
 }
 
-button:hover{
-    background-image: linear-gradient(rgb(99, 63, 142), rgb(46, 15, 85));
+button.light:hover{
+    background-image: linear-gradient(var(--light-li), var(--light-title));
     color: white;
-    border: none;
+    transition: 0.5s;
 }

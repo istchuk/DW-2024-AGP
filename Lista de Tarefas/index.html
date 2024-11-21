@@ -5,23 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
 
+    <!-- FONTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Archivo+Black&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lilita+One&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- ÍCONE LIXEIRA -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- ÍCONE EDITAR -->
 </head>
 <body class="dark">
     <div class="container">
             <h1 class="titulo dark">Lista de Tarefas</h1>
 
             <div class="gerar">
-                <input class="create dark" type="text">
-                <button class="add dark">+</button>
+                <input class="create dark" id="taskInput" type="text">
+                <button onclick=“addTask()” class="add dark" >+</button>
             </div>
 
             <ul class="tasks">
-                <li class="dark"><input type="checkbox">Tarefa 1</li>
-                <li class="dark"><input type="checkbox">Tarefa 2</li>
+                <li class="dark"><input type="checkbox">Tarefa 1 <i class="material-icons">delete_sweep</i><i class="material-icons">create</i></li>
+                <li class="dark"><input type="checkbox">Tarefa 2 <i class="material-icons">delete_sweep</i><i class="material-icons">create</i></li>
             </ul>
 
             <progress value="10" max="100"></progress>
