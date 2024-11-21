@@ -5,6 +5,16 @@
     font-family: "Josefin Sans";
 }
 
+:root {
+    --text-color: purple;
+    --light-color: white;
+    --dark-color: rgb(36, 9, 69);
+    --dark-input: rgb(46, 15, 85);
+    --dark-text-color: rgb(130, 109, 151);
+    --dark-title: white;
+}
+
+
 .container{
     max-width: 100%;
     min-height: 100vh;
@@ -16,7 +26,7 @@
 
 .titulo {
     padding-bottom: 50px;
-    font-size: 60px;
+    font-size: 70px;
 }
 
 .tasks{
@@ -70,5 +80,74 @@ li {
 progress {
     height: 45px;
     width: 600px;
-    background-color: green;
+}
+
+/* Dark Theme */
+
+body.dark{
+    background-color: var(--dark-color);
+    color: var(--text-color);
+}
+
+input.dark{
+    background-color: var(--dark-input);
+    border: 1px solid var(--dark-input);
+    color: var(--dark-text-color);
+}
+
+li.dark{
+    background-color: rgb(65, 24, 116);
+    color: var(--dark-title);
+}
+
+h1.dark{
+    color: var(--dark-title);
+}
+
+button.dark{
+    background-image: linear-gradient(rgb(46, 15, 85), rgb(99, 63, 142));
+    color: var(--dark-input);
+    border: none;
+}
+
+button:hover{
+    background-image: linear-gradient(rgb(99, 63, 142), rgb(46, 15, 85));
+    color: white;
+    border: none;
+    transition: 0.5s;
+}
+
+
+/* Light Theme */
+
+body.light{
+    background-color: var(--dark-color);
+    color: var(--text-color);
+}
+
+input.light{
+    background-color: var(--dark-input);
+    border: 1px solid var(--dark-input);
+    color: var(--dark-text-color);
+}
+
+li.light{
+    background-color: rgb(65, 24, 116);
+    color: var(--dark-title);
+}
+
+h1.light{
+    color: var(--dark-title);
+}
+
+button.light{
+    background-image: linear-gradient(rgb(46, 15, 85), rgb(99, 63, 142));
+    color: var(--dark-input);
+    border: none;
+}
+
+button:hover{
+    background-image: linear-gradient(rgb(99, 63, 142), rgb(46, 15, 85));
+    color: white;
+    border: none;
 }
