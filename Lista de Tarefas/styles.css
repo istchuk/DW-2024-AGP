@@ -78,6 +78,10 @@ ul {
     color: rgb(80, 79, 79);
 }
 
+.material-icons{
+    cursor: pointer;
+}
+
 li {
     list-style-type: none;
     display: flex;

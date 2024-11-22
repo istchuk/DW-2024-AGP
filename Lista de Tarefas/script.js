@@ -38,13 +38,15 @@ const createLi = (taskInfo, check) => {
 	del.classList.add('material-icons')
 	del.appendChild(document.createTextNode('delete_sweep'))
 	const edit = document.createElement("i")
-	del.classList.add('material-icons')
-	del.appendChild(document.createTextNode('create'))
+	edit.classList.add('material-icons')
+	edit.appendChild(document.createTextNode('create'))
 	const span = document.createElement('span')
 	checkbox.type = "checkbox"
 	checkbox.checked = check
 	
-	checkbox.addEventListener("change", function(){checkHandle(taskInfo, checkbox)})
+	del.addEventListener("click", ()=>{delLi(taskInfo)})
+	edit.addEventListener("click", ()=>{editLi(taskInfo, span)})
+	checkbox.addEventListener("change", ()=>{checkHandle(taskInfo, checkbox)})
 	
 	li.appendChild(checkbox)
 	span.appendChild(document.createTextNode(taskInfo))
@@ -55,8 +57,22 @@ const createLi = (taskInfo, check) => {
 	ul.appendChild(li)
 }
 
-const editLi = () => {
+const editLi = (taskInfo, span) => {
+	const task = tasks.find(t => t.taskInfo == taskInfo)
+	span.contentEditable = true
 
+	span.addEventListener("blur", () => {
+        task.taskInfo = span.textContent.trim()
+        renderTasks()
+    })
+}
+
+const delLi = (taskInfo) => {
+	const task = tasks.findIndex(t => t.taskInfo == taskInfo)
+	if (task > -1){
+		tasks.splice(task, 1)
+		renderTasks()
+	}
 }
 
 const updateProgressbar = () => {
