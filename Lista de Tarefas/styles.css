@@ -6,15 +6,15 @@
 }
 
 :root {
-    --dark-color: rgb(36, 9, 69);
-    --dark-input: rgb(46, 15, 85);
-    --dark-text-color: rgb(130, 109, 151);
+    --dark-color: rgb(2, 42, 4);
+    --dark-input: rgb(15, 85, 37);
+    --dark-text-color: rgb(109, 151, 113);
     --dark-title: white;
 
-    --light-title: rgb(114, 18, 155);
-    --light-input: rgb(220, 188, 234);
-    --light-text-color: rgb(28, 3, 52);
-    --light-li: rgb(220, 188, 234);
+    --light-title: rgb(18, 155, 29);
+    --light-input: rgb(188, 234, 188);
+    --light-text-color: rgb(3, 52, 6);
+    --light-li: rgb(188, 234, 204);
     
 }
 
@@ -87,6 +87,7 @@ li {
 progress {
     height: 45px;
     width: 600px;
+    background-color: green;
 }
 
 /* Dark Theme */
@@ -103,7 +104,7 @@ input.dark{
 }
 
 li{
-    background-color: rgb(65, 24, 116);
+    background-color: rgb(24, 116, 47);
     color: var(--dark-title);
 }
 
@@ -112,13 +113,13 @@ h1.dark{
 }
 
 button.dark{
-    background-image: linear-gradient(rgb(46, 15, 85), rgb(99, 63, 142));
+    background-image: linear-gradient(rgb(15, 85, 17), rgb(63, 142, 71));
     color: var(--dark-input);
     border: none;
 }
 
 button.dark:hover{
-    background-image: linear-gradient(rgb(99, 63, 142), rgb(46, 15, 85));
+    background-image: linear-gradient(rgb(63, 142, 71), rgb(15, 85, 17));
     color: white;
     border: none;
     transition: 0.5s;
@@ -132,7 +133,7 @@ body.light{
 }
 
 input.light{
-    background-color: var(--light-input);
+    background-color: var(--light-li);
     border: 1px solid var(--light-title);
     color: var(--light-title);
 }
