@@ -2,7 +2,6 @@ const tasks = [
 	{taskInfo: "Criar um documento HTML", check: true},
 	{taskInfo: "Estilizar pelo css", check: true},
 	{taskInfo: "Funcionalizar via javascript", check: true},
-	{taskInfo: "Apresentar pro professor Liberty", check: false}
 ]
 
 const ul = document.getElementsByTagName("ul")[0]
@@ -12,8 +11,15 @@ let diff = 1
 
 const addTask = () => {
 	if (input.value.trim() != ""){
-		tasks.push({taskInfo: input.value, check: false})
-		input.value = ""
+		if(tasks.find(t => t.taskInfo == input.value)){
+			input.value = ''
+			input.placeholder = 'Esta tarefa já existe!'
+			return
+		}
+		else{
+			tasks.push({taskInfo: input.value, check: false})
+			input.value = ""
+		}
 	}
 	else{
 		tasks.push({taskInfo: `Nova tarefa ${diff}`, check: false})
