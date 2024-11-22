@@ -22,6 +22,34 @@ const addTask = () => {
 	renderTasks()
 }
 
+const editLi = (taskInfo, span) => {
+	const task = tasks.find(t => t.taskInfo == taskInfo)
+	span.contentEditable = true
+
+	span.focus()
+
+	span.addEventListener("blur", () => {
+		task.taskInfo = span.textContent.trim()
+		renderTasks()
+	})
+}
+
+const delLi = (taskInfo) => {
+	const task = tasks.findIndex(t => t.taskInfo == taskInfo)
+	if (task > -1){
+		tasks.splice(task, 1)
+		renderTasks()
+	}
+}
+
+const checkHandle = (taskInfo, checkbox) => {
+	const task = tasks.find(t => t.taskInfo == taskInfo)
+	if (task){
+		task.check = checkbox.checked
+	}
+	renderTasks()
+}
+
 const renderTasks = () => {
 	ul.innerHTML = ""
 	for (const tsk of tasks){
@@ -51,28 +79,10 @@ const createLi = (taskInfo, check) => {
 	li.appendChild(checkbox)
 	span.appendChild(document.createTextNode(taskInfo))
 	li.appendChild(span)
-	li.appendChild(del)
 	li.appendChild(edit)
+	li.appendChild(del)
 	
 	ul.appendChild(li)
-}
-
-const editLi = (taskInfo, span) => {
-	const task = tasks.find(t => t.taskInfo == taskInfo)
-	span.contentEditable = true
-
-	span.addEventListener("blur", () => {
-        task.taskInfo = span.textContent.trim()
-        renderTasks()
-    })
-}
-
-const delLi = (taskInfo) => {
-	const task = tasks.findIndex(t => t.taskInfo == taskInfo)
-	if (task > -1){
-		tasks.splice(task, 1)
-		renderTasks()
-	}
 }
 
 const updateProgressbar = () => {
@@ -82,14 +92,6 @@ const updateProgressbar = () => {
 	const doneTasks = tasks.filter(task => task.check).length
 	
 	pBar.value = (doneTasks / totalTasks) * 100
-}
-
-const checkHandle = (taskInfo, checkbox) => {
-	const task = tasks.find(t => t.taskInfo == taskInfo)
-	if (task){
-		task.check = checkbox.checked
-	}
-	renderTasks()
 }
 
 updateProgressbar()
