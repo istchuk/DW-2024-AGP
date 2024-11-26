@@ -112,15 +112,18 @@ const createLi = (taskInfo, check) => {
 }
 
 const updateProgressbar = () => {
-	const pBar = document.getElementsByTagName("progress")[0]
+	const pBar = document.getElementById("progress")
+	const label = document.getElementById("progresslabel")
 	
 	const totalTasks = tasks.length
 	const doneTasks = tasks.filter(task => task.check).length
 	if (totalTasks != 0){
 		pBar.value = (doneTasks / totalTasks) * 100
+		label.textContent = `[${doneTasks}/${totalTasks}] tarefas concluidas`
 	}
 	else{
 		pBar.value = 0
+		label.textContent = `Nenhuma tarefa à ser feita`
 	}
 	
 }

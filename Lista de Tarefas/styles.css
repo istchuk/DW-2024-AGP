@@ -117,7 +117,7 @@ li {
     color: var(--bg);
 }
 
-.progress {
+#progress {
     width: 45vw;
     background-color: rgba(0, 0, 0, 0);
 }
@@ -221,7 +221,7 @@ svg {
         font-size: 1.5625rem;
     }
 
-    .progress {
+    #progress {
         width: 90%;
     }
 
@@ -356,7 +356,7 @@ svg {
             color: var(--bg);
         }
         
-        .progress {
+        #progress {
             width: 45vw;
             background-color: rgba(0, 0, 0, 0);
         }
@@ -459,7 +459,7 @@ svg {
                 font-size: 25px;
             }
         
-            .progress {
+            #progress {
                 width: 90%;
             }
         
