@@ -1,0 +1,242 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans";
+}
+
+:root {
+    --dark-color: rgb(2, 42, 4);
+    --dark-input: rgb(15, 85, 37);
+    --dark-text-color: rgb(109, 151, 113);
+    --dark-title: white;
+
+    --light-title: rgb(18, 155, 29);
+    --light-input: rgb(188, 234, 188);
+    --light-text-color: rgb(3, 52, 6);
+    --light-li: rgb(188, 234, 204);
+    
+}
+
+
+.container{
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 90px;
+}
+
+.titulo {
+    padding-bottom: 50px;
+    font-size: 70px;
+}
+
+.tasks{
+    padding: 30px;
+}
+
+ul {
+    padding: 10px;
+}
+
+.tasks li{
+    min-height: 55px;
+    width: 600px;
+    border: 1px solid black;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    text-indent: 5px;
+}
+
+.gerar{
+    height: 55px;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.create{
+    width: 535px;
+    height: 55px;
+    border-radius: 4px;
+    font-size: 27px;
+    text-indent: 7px;
+}
+
+.add{
+    width: 55px;
+    border-radius: 4px;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(80, 79, 79);
+    word-wrap: break-all;
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+}
+
+
+progress {
+    height: 45px;
+    width: 600px;
+    background-color: green;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+#card{
+    width: 85vw;
+    height: 90vh;
+    background-color: var(--dark-input);
+    border: 1px solid black;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    margin: 10px;
+    position: fixed;
+    padding: 20px;
+}
+
+li {
+    font-size: 25px;
+    list-style-type: none;
+    color: var(--dark-title);
+    padding: 20px;
+}
+
+.x svg{
+    height: 50px;
+    width: 50px;
+    margin-left: 63rem;
+    
+    
+    
+}
+
+span{
+    font-size: 25px;
+    color: var(--dark-title);
+    margin: 20px;
+    
+}
+
+.nomes{
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+svg{
+    height: 25px;
+    width: 25px;
+    fill: white;
+    
+}
+
+.tema svg{
+    fill: black;
+    height: 70px;
+    width: 70px;
+    /* border: 1px solid black; */
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+/* Dark Theme */
+
+body.dark{
+    background-color: var(--dark-color);
+    color: var(--text-color);
+}
+
+input.dark{
+    background-color: var(--dark-input);
+    border: 1px solid var(--dark-input);
+    color: var(--dark-text-color);
+}
+
+li{
+    background-color: rgb(24, 116, 47);
+    color: var(--dark-title);
+}
+
+h1.dark{
+    color: var(--dark-title);
+}
+
+button.dark{
+    background-image: linear-gradient(rgb(15, 85, 17), rgb(63, 142, 71));
+    color: var(--dark-input);
+    border: none;
+}
+
+button.dark:hover{
+    background-image: linear-gradient(rgb(63, 142, 71), rgb(15, 85, 17));
+    color: white;
+    border: none;
+    transition: 0.5s;
+}
+
+div.dark{
+    background-color: var(--dark-input);
+}
+
+span.dark{
+    color: var(--dark-title);
+}
+
+
+
+
+/* Light Theme */
+
+body.light{
+    background-color: var(--dark-title);
+}
+
+input.light{
+    background-color: var(--light-li);
+    border: 1px solid var(--light-title);
+    color: var(--light-title);
+}
+
+li.light{
+    background-color: var(--light-li);
+    color: var(--light-title);
+    border: 1px solid var(--light-title);
+
+}
+
+h1.light{
+    color: var(--light-title);
+}
+
+button.light{
+    background-image: linear-gradient(var(--light-title), var(--light-li));
+    color: var(--light-input);
+    border: 1px, solid, var(--light-title);
+}
+
+button.light:hover{
+    background-image: linear-gradient(var(--light-li), var(--light-title));
+    color: white;
+    transition: 0.5s;
+}
+
+div.ligth{
+    background-color: var(--dark-title);
+}
